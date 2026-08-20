@@ -11,13 +11,6 @@ else
     TEST_LIBS = -lgtest -lgtest_main -pthread
 endif
 
-
-CXXFLAGS = -std=c++17 -Wall -Wextra -g
-
-# Asume que Google Test está instalado en el sistema
-# Ubuntu/Debian: sudo apt-get install libgtest-dev libgmock-dev
-TEST_LIBS = -lgtest -lgtest_main -pthread
-
 SRC = DatasetLoader.cpp tests.cpp
 TARGET = run_tests
 
