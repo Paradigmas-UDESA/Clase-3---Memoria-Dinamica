@@ -18,3 +18,9 @@ Objetivos:
 - `make test`: Ejecuta la test suite.
 - `make valgrind`: Ejecuta los tests buscando memory leaks con Valgrind.
 - `make clean`: Limpia los archivos binarios.
+
+
+
+### Flashcards sobre la clase:
+(Requiere login)
+https://knowt.com/flashcards/f3855265-3d3c-4970-ad9f-cf855a25bc23
