@@ -2,9 +2,15 @@ UNAME_S := $(shell uname -s)
 
 ifeq ($(UNAME_S),Darwin)
     CXX = clang++
+    GTEST_PREFIX := $(shell brew --prefix googletest 2>/dev/null)
+    CXXFLAGS = -std=c++17 -Wall -Wextra -g -I$(GTEST_PREFIX)/include
+    TEST_LIBS = -L$(GTEST_PREFIX)/lib -lgtest -lgtest_main -pthread
 else
     CXX = g++
+    CXXFLAGS = -std=c++17 -Wall -Wextra -g
+    TEST_LIBS = -lgtest -lgtest_main -pthread
 endif
+
 
 CXXFLAGS = -std=c++17 -Wall -Wextra -g
 
