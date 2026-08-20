@@ -1,0 +1,20 @@
+# Taller de Memoria Dinamica - Paradigmas de Programacion
+
+## Consigna
+Estas trabajando en un prototipo inicial para un sistema de Machine Learning que debe cargar un dataset desde un archivo CSV. Sin embargo, el codigo actual está "roto": tiene problemas de gestion de memoria (memory leaks, accesos a memoria liberada y *segfaults*).
+
+Objetivos:
+1. Compilar y ejecutar los tests usando el `Makefile`.
+2. Identificar los bugs usando los tests y el debugger. Anoten cuantos encontraron y de que tipo de error se trata.
+    - Bug1: ej memory leak 
+    - Bug2:
+    ...
+3. Arreglar todos los bugs y lograr pasar los tests con exito.
+4. Refactorizar el manejo de memoria usando **Smart Pointers (`std::unique_ptr`)**.
+5. Asegurarse de que **Valgrind** reporte cero memory leaks al final del ejercicio.
+
+## Comandos de Make
+- `make`: Compila el proyecto.
+- `make test`: Ejecuta la test suite.
+- `make valgrind`: Ejecuta los tests buscando memory leaks con Valgrind.
+- `make clean`: Limpia los archivos binarios.
