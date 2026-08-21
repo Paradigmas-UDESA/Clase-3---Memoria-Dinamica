@@ -14,8 +14,8 @@ Objetivos:
 5. Asegurarse de que **Valgrind** reporte cero memory leaks al final del ejercicio.
 
 ## Comandos de Make
-- `make`: Compila el proyecto.
-- `make test`: Ejecuta la test suite.
+- `make TYPE=Base / make TYPE=RawPtr / make TYPE=Smart`: Compila el proyecto base, solucion con raw pointer y solucion con smart pointers.
+- `make test`: Ejecuta la test suite compilada.
 - `make valgrind`: Ejecuta los tests buscando memory leaks con Valgrind.
 - `make clean`: Limpia los archivos binarios.
 

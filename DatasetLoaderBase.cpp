@@ -1,7 +1,7 @@
 #include <fstream> // Librerias
 #include <sstream>
 #include <stdexcept>
-#include "DatasetLoader.h"
+#include "sample.h"
 
 using namespace std; // Elimina la necesidad de usar "std::" Es una mala practica en un entorno de produccion.
 
@@ -27,8 +27,8 @@ Sample** loadDataset(const string& filename, int capacidadMax, int& outCount) {
 
         Sample* s = new Sample();
         if (getline(ss, val, ',')) s->id = stoi(val); // stoi: String TO Integer.
-        if (getline(ss, val, ',')) s->feature1 = stoi(val);
-        if (getline(ss, val, ',')) s->feature2 = stoi(val);
+        if (getline(ss, val, ',')) s->feature1 = stod(val);
+        if (getline(ss, val, ',')) s->feature2 = stod(val);
         if (getline(ss, val, ',')) s->label = stoi(val);
 
         dataset[i] = s;

@@ -11,7 +11,11 @@ else
     TEST_LIBS = -lgtest -lgtest_main -pthread
 endif
 
-SRC = DatasetLoader.cpp tests.cpp
+# Seleccionar: Base, RawPtr o Smart
+TYPE ?= Base
+
+SRC = DatasetLoader$(TYPE).cpp tests$(TYPE).cpp
+
 TARGET = run_tests
 
 all: build
